@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import MainLayout from '../layout/MainLayout'
 
 export default function Detail() {
-  state={
+  let state={
     content: [
         {
             id: 1,
@@ -25,15 +25,6 @@ export default function Detail() {
     ],
     data: ""
   }
-
-  componentDidMount(){
-    let id=1;
-    this.setState({
-      data: this.state.content.find(item => item.id === parseInt(id))
-    })
-  }
-
-  render() {
     return (
       <MainLayout>
         <main style={main}>
@@ -46,7 +37,6 @@ export default function Detail() {
         </main>
       </MainLayout>
     )
-  }
 }
 
 const main = {
